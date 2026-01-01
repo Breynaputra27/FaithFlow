@@ -1,4 +1,4 @@
-package com.example.habit_tracker_islami
+package com.agim.habittrackerislami
 
 import io.flutter.embedding.android.FlutterActivity
 

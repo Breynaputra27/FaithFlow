@@ -1,10 +1,10 @@
-name: habit_tracker_islami
+name: FaithFlow
 description: Islamic Habit Tracker
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -29,9 +29,9 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: false
-  image_path: "assets/images/logo.png"
+  image_path: "assets/images/Logo.png"
   adaptive_icon_background: "#2E7D32"
-  adaptive_icon_foreground: "assets/images/logo.png"
+  adaptive_icon_foreground: "assets/images/Logo.png"
 
 flutter:
   uses-material-design: true

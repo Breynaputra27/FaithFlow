@@ -397,7 +397,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   Widget _buildLogo(BuildContext context) {
     // Coba load logo dari assets, kalau gagal pakai icon default
     return Image.asset(
-      'assets/images/logo.png',
+      'assets/images/Logo.png',
       width: 80,
       height: 80,
       errorBuilder: (context, error, stackTrace) {
