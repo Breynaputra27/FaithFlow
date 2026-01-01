@@ -1,0 +1,39 @@
+name: habit_tracker_islami
+description: Islamic Habit Tracker
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.0.0
+  flutter_riverpod: ^2.4.0
+  google_fonts: ^6.1.0
+  animate_do: ^3.3.4
+  shimmer: ^3.0.0
+  percent_indicator: ^4.2.3
+  confetti: ^0.7.0
+  flutter_animate: ^4.5.0
+  intl: ^0.18.1
+  fl_chart: ^0.68.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#2E7D32"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
