@@ -7,9 +7,7 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-/* ===============================
-   LOAD KEYSTORE PROPERTIES
-   =============================== */
+// Membaca file key.properties
 val keystoreProperties = Properties()
 val keystorePropertiesFile = rootProject.file("key.properties")
 if (keystorePropertiesFile.exists()) {
@@ -17,24 +15,17 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.agim.habittrackerislami"
-    compileSdk = 36   
+    namespace = "com.breyna.faithflow"
+    
+    compileSdk = 36 
 
     defaultConfig {
-        applicationId = "com.agim.habittrackerislami"
-        minSdk = flutter.minSdkVersion
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
+        applicationId = "com.breyna.faithflow"
+        minSdk = 24      
+        targetSdk = 35   
+        
+        versionCode = 9  // <--- NAIKKAN KE 8
+        versionName = "1.0.9"
     }
 
     signingConfigs {
@@ -46,10 +37,20 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     buildTypes {
         release {
+            // Sekarang pakai kunci release yang ASLI
             signingConfig = signingConfigs.getByName("release")
-            isMinifyEnabled = false       // ⬅ matiin dulu biar aman
+            isMinifyEnabled = false
             isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

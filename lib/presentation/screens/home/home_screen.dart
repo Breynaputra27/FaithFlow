@@ -22,25 +22,26 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   late ConfettiController _confettiController;
-  
+
   @override
   void initState() {
     super.initState();
-    _confettiController = ConfettiController(duration: const Duration(seconds: 3));
+    _confettiController =
+        ConfettiController(duration: const Duration(seconds: 3));
   }
-  
+
   @override
   void dispose() {
     _confettiController.dispose();
     super.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     final habitsAsync = ref.watch(habitsProvider);
     final completedHabitsAsync = ref.watch(todayCompletedHabitsProvider);
     final isDark = ref.watch(themeProvider);
-    
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -95,7 +96,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
             ),
           ),
-          
+
           // Confetti
           Align(
             alignment: Alignment.topCenter,
@@ -112,7 +113,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ],
             ),
           ),
-          
+
           // Content
           RefreshIndicator(
             onRefresh: () async {
@@ -125,9 +126,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 if (habits.isEmpty) {
                   return _buildEmptyState();
                 }
-                
+
                 return completedHabitsAsync.when(
-                  data: (completedHabits) => _buildHabitsList(habits, completedHabits),
+                  data: (completedHabits) =>
+                      _buildHabitsList(habits, completedHabits),
                   loading: () => _buildShimmerLoading(),
                   error: (error, _) => _buildErrorState(error.toString()),
                 );
@@ -151,7 +153,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   Widget _buildEmptyState() {
     return Center(
       child: FadeInUp(
@@ -182,7 +184,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   Widget _buildShimmerLoading() {
     return ListView.builder(
       padding: const EdgeInsets.all(16),
@@ -202,7 +204,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       },
     );
   }
-  
+
   Widget _buildErrorState(String error) {
     return Center(
       child: FadeIn(
@@ -211,7 +213,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           children: [
             const Icon(Icons.error_outline, size: 80, color: Colors.red),
             const SizedBox(height: 16),
-            Text(
+            const Text(
               'Oops! Terjadi kesalahan',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -232,19 +234,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   Widget _buildHabitsList(List habits, Map<String, bool> completedHabits) {
     final completedCount = completedHabits.length;
     final totalCount = habits.length;
     final progress = totalCount > 0 ? completedCount / totalCount : 0.0;
-    
+
     // Trigger confetti when 100% complete
     if (progress == 1.0 && totalCount > 0) {
       Future.delayed(const Duration(milliseconds: 500), () {
         if (mounted) _confettiController.play();
       });
     }
-    
+
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 100, 16, 100),
       children: [
@@ -252,9 +254,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         FadeInDown(
           child: _buildProgressCard(completedCount, totalCount, progress),
         ),
-        
+
         const SizedBox(height: 24),
-        
+
         // Date Header
         FadeInLeft(
           child: Row(
@@ -266,7 +268,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(width: 8),
               Text(
-                DateFormat('EEEE, dd MMMM yyyy', 'id_ID').format(DateTime.now()),
+                DateFormat('EEEE, dd MMMM yyyy', 'id_ID')
+                    .format(DateTime.now()),
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -275,14 +278,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ],
           ),
         ),
-        
+
         const SizedBox(height: 16),
-        
+
         // Habits List with staggered animation
         ...List.generate(habits.length, (index) {
           final habit = habits[index];
           final isCompleted = completedHabits[habit.id] ?? false;
-          
+
           return FadeInUp(
             delay: Duration(milliseconds: index * 50),
             child: HabitCard(
@@ -296,10 +299,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ],
     );
   }
-  
+
+  // --- BAGIAN INI YANG SUDAH DIPERBAIKI SUPAYA TIDAK ERROR DI HP KECIL ---
   Widget _buildProgressCard(int completed, int total, double progress) {
     final isDark = ref.watch(themeProvider);
-    
+
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
@@ -328,36 +332,46 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Progress Hari Ini',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+              // Menggunakan Expanded supaya Teks tidak mendorong Lingkaran
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Progress Hari Ini',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      overflow: TextOverflow.ellipsis, // Pelindung teks panjang
+                      maxLines: 1,
                     ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    '$completed dari $total habit',
-                    style: const TextStyle(
-                      color: Colors.white70,
-                      fontSize: 14,
+                    const SizedBox(height: 8),
+                    Text(
+                      '$completed dari $total habit',
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 14,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
+
+              const SizedBox(width: 16), // Jarak aman
+
               CircularPercentIndicator(
-                radius: 50,
+                radius: 45, // Ukuran sedikit dikecilkan biar muat di A10s
                 lineWidth: 8,
                 percent: progress,
                 center: Text(
                   '${(progress * 100).toInt()}%',
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -382,11 +396,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 children: [
                   const Icon(Icons.celebration, color: Colors.white, size: 20),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Alhamdulillah! Semua habit selesai!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
+                  // Flexible menjaga teks perayaan agar tidak nabrak
+                  const Flexible(
+                    child: Text(
+                      'Alhamdulillah! Semua habit selesai!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ],
@@ -397,13 +415,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+  // -----------------------------------------------------------------------
+
   Future<void> _toggleHabit(String habitId, bool currentStatus) async {
     // Haptic feedback
     HapticFeedback.lightImpact();
-    
+
     final repository = ref.read(habitRepositoryProvider);
-    
+
     try {
       if (currentStatus) {
         await repository.removeHabitLog(
@@ -413,7 +432,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       } else {
         await repository.logHabit(habitId: habitId);
       }
-      
+
       ref.invalidate(todayCompletedHabitsProvider);
     } catch (e) {
       if (mounted) {
@@ -427,10 +446,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       }
     }
   }
-  
+
   void _showHabitOptions(Habit habit) {
     HapticFeedback.mediumImpact();
-    
+
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -463,7 +482,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               ListTile(
                 leading: const Icon(Icons.delete, color: Colors.red),
-                title: const Text('Hapus Habit', style: TextStyle(color: Colors.red)),
+                title: const Text('Hapus Habit',
+                    style: TextStyle(color: Colors.red)),
                 onTap: () {
                   Navigator.pop(context);
                   _showDeleteConfirmation(habit);
@@ -476,10 +496,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   void _showEditHabitDialog(Habit habit) {
     final controller = TextEditingController(text: habit.name);
-    
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -504,12 +524,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 );
                 return;
               }
-              
+
               if (controller.text == habit.name) {
                 Navigator.pop(context);
                 return;
               }
-              
+
               try {
                 HapticFeedback.mediumImpact();
                 final repository = ref.read(habitRepositoryProvider);
@@ -517,9 +537,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   habitId: habit.id,
                   updates: {'name': controller.text},
                 );
-                
+
                 ref.invalidate(habitsProvider);
-                
+
                 if (context.mounted) {
                   Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -546,7 +566,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   void _showDeleteConfirmation(Habit habit) {
     showDialog(
       context: context,
@@ -564,10 +584,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 HapticFeedback.heavyImpact();
                 final repository = ref.read(habitRepositoryProvider);
                 await repository.deleteHabit(habit.id);
-                
+
                 ref.invalidate(habitsProvider);
                 ref.invalidate(todayCompletedHabitsProvider);
-                
+
                 if (context.mounted) {
                   Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -597,11 +617,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   void _showAddHabitDialog() {
     final controller = TextEditingController();
     String selectedType = AppConstants.habitTypePrayer;
-    
+
     showDialog(
       context: context,
       builder: (context) => StatefulBuilder(
@@ -695,7 +715,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   );
                   return;
                 }
-                
+
                 try {
                   HapticFeedback.mediumImpact();
                   final repository = ref.read(habitRepositoryProvider);
@@ -703,9 +723,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     habitType: selectedType,
                     name: controller.text,
                   );
-                  
+
                   ref.invalidate(habitsProvider);
-                  
+
                   if (context.mounted) {
                     Navigator.pop(context);
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -733,7 +753,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
-  
+
   void _showLogoutDialog() {
     showDialog(
       context: context,
@@ -750,9 +770,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               HapticFeedback.heavyImpact();
               ref.invalidate(habitsProvider);
               ref.invalidate(todayCompletedHabitsProvider);
-              
+
               await SupabaseService.signOut();
-              
+
               if (context.mounted) {
                 Navigator.pop(context);
               }
