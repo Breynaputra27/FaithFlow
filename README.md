@@ -10,7 +10,7 @@ FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim memban
   <tr>
     <td align="center">
       <a href="https://github.com/Agim Ridwan">
-        <img src="https://avatars.githubusercontent.com/u/USERNAME_TEMAN_1" width="100px;" alt=""/>
+        <img src="https://github.com/user-attachments/assets/5e295a8e-745a-474c-b6eb-5377811f62f0" width="100px;" alt=""/>
         <br />
         <sub><b>Agim Ridwan</b></sub>
       </a>
