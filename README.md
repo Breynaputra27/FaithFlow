@@ -4,35 +4,39 @@
 FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim membangun kebiasaan ibadah harian secara konsisten melalui fitur pencatatan, pengingat, dan checklist yang sederhana namun bermakna.
 
 ---
-<h2 align="center">👥 Our Team</h2>
+<h2>👥 Our Team</h2>
 
-<table align="center">
+<table>
 <tr>
 <td align="center">
-<img src="https://github.com/user-attachments/assets/5e295a8e-745a-474c-b6eb-5377811f62f0" width="70px" style="border: 4px solid #D4AF37;"><br>
+<img src="https://github.com/user-attachments/assets/5e295a8e-745a-474c-b6eb-5377811f62f0" width="130px" style="border: 4px solid #D4AF37;"><br>
 <b>Agim Ridwan</b><br>
 1237050037
 </td>
 
 <td align="center">
-<img src="https://github.com/user-attachments/assets/6df42a2c-0824-4ce0-bd0c-23be9e19f5af" width="70px" style="border: 4px solid #D4AF37;"><br>
+<img src="https://github.com/user-attachments/assets/6df42a2c-0824-4ce0-bd0c-23be9e19f5af" width="150px" style="border: 4px solid #D4AF37;"><br>
 <b>Aryanti Nagela</b><br>
 1237050019
 </td>
 
 <td align="center">
-<img src="https://github.com/user-attachments/assets/6546ecbe-c2ae-4dd7-bfd8-5bbe3ecbeb7e" width="70px" style="border: 4px solid #D4AF37;"><br>
+<img src="https://github.com/user-attachments/assets/cf1fe42c-e85e-4343-b41c-bdcb4c06ff39" width="140px" style="border: 4px solid #D4AF37;"><br>
 <b>Breyna Putra T</b><br>
 1237050053
 </td>
 
 <td align="center">
-<img src="https://github.com/user-attachments/assets/60bd06bd-740b-40c0-b510-a7a033910ebd" width="70px" style="border: 4px solid #D4AF37;"><br>
+<img src="https://github.com/user-attachments/assets/60bd06bd-740b-40c0-b510-a7a033910ebd" width="150px" style="border: 4px solid #D4AF37;"><br>
 <b>Eka Maysa R</b><br>
 1237050034
 </td>
 </tr>
 </table>
+
+<a href="https://uinsgd.ac.id/">UIN Sunan Gunung Djati</a>
+<br>
+<a href="http://if.uinsgd.ac.id/">Teknik Informatika</a>
 
 ---
 
