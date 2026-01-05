@@ -19,7 +19,7 @@ FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim memban
     </td>
         <td align="center">
       <a href="https://github.com/Agim Ridwan">
-        <img src="https://avatars.githubusercontent.com/u/USERNAME_TEMAN_1" width="100px;" alt=""/>
+        <img src="https://github.com/user-attachments/assets/6df42a2c-0824-4ce0-bd0c-23be9e19f5af" width="100px;" alt=""/>
         <br />
         <sub><b>Aryanti Nagela</b></sub>
       </a>
@@ -28,7 +28,7 @@ FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim memban
     </td>
        <td align="center">
       <a href="https://github.com/Agim Ridwan">
-        <img src="https://avatars.githubusercontent.com/u/USERNAME_TEMAN_1" width="100px;" alt=""/>
+        <img src="https://github.com/user-attachments/assets/6546ecbe-c2ae-4dd7-bfd8-5bbe3ecbeb7e" width="100px;" alt=""/>
         <br />
         <sub><b>Breyna Putra Tarigan</b></sub>
       </a>
@@ -37,7 +37,7 @@ FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim memban
     </td>
         <td align="center">
       <a href="https://github.com/Agim Ridwan">
-        <img src="https://avatars.githubusercontent.com/u/USERNAME_TEMAN_1" width="100px;" alt=""/>
+        <img src="https://github.com/user-attachments/assets/60bd06bd-740b-40c0-b510-a7a033910ebd" width="100px;" alt=""/>
         <br />
         <sub><b>Eka Maysa Rahmah</b></sub>
       </a>
@@ -46,6 +46,9 @@ FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim memban
     </td>
   </tr>
 </table>
+
+<h3><a href="https://uinsgd.ac.id/">UIN Sunan Gunung Djati</a></h3>
+<h3><a href="http://if.uinsgd.ac.id/">Teknik Informatika</a></h3>
 
 ---
 
