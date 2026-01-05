@@ -1,23 +1,56 @@
-# habit_tracker_islami
+# 🌙 FaithFlow  
+*Islamic Habit Tracker Application*
 
-A new Flutter project.
+FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim membangun kebiasaan ibadah harian secara konsisten melalui fitur pencatatan, pengingat, dan checklist yang sederhana namun bermakna.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  Our Team
 
 
-await Supabase.initialize(
-    url: 'https://ueeiizhxhsfdtuomtusl.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVlZWlpemh4aHNmZHR1b210dXNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2NzE0MTksImV4cCI6MjA4MTI0NzQxOX0.NOK-emR6ZPpmTcGViW-JZpLvIrirkK5f3X5h512Ksr8',
-  );
-  
+---
+
+##  Aplikasi FaithFlow
+FaithFlow dirancang sebagai aplikasi pencatat ibadah harian yang memungkinkan pengguna:
+- Membuat daftar ibadah wajib dan sunnah
+- Mengatur pengingat ibadah
+- Menandai ibadah yang telah dilakukan melalui checklist
+- Memantau konsistensi ibadah secara mandiri
+
+Pendekatan aplikasi ini menyerupai aplikasi catatan (note app) yang ringan, fleksibel, dan mudah digunakan oleh semua kalangan.
+
+---
+
+##  Business Understanding
+
+###  Latar Belakang Masalah
+Banyak umat Muslim mengalami kesulitan dalam menjaga konsistensi ibadah akibat aktivitas sehari-hari yang padat. Tidak adanya pencatatan ibadah yang terstruktur, keterbatasan pengingat yang personal, serta aplikasi ibadah yang terlalu kompleks membuat niat baik sering kali tidak berlanjut menjadi kebiasaan.
+
+###  Solusi
+FaithFlow hadir sebagai solusi digital dengan menyediakan:
+- Checklist ibadah harian yang fleksibel
+- Pengingat ibadah yang dapat disesuaikan
+- Tampilan sederhana dan ramah pengguna
+- Pendekatan reflektif tanpa penilaian  
+Solusi ini membantu pengguna mengubah niat ibadah menjadi rutinitas yang konsisten dan berkelanjutan.
+
+###  Market Opportunity
+Dengan populasi Muslim dunia yang mencapai lebih dari 1,9 miliar jiwa, FaithFlow memiliki potensi pasar yang sangat besar. Selain itu, meningkatnya tren aplikasi Islami dan self-improvement serta minimnya aplikasi habit tracker khusus ibadah Islam membuka peluang signifikan bagi pengembangan FaithFlow.
+
+---
+
+##  Modelling
+Pengembangan FaithFlow dilakukan dengan pendekatan:
+- Perancangan alur pengguna (user flow)
+- Desain antarmuka sederhana dan intuitif
+- Pemodelan fitur checklist, reminder, dan tracking ibadah
+- Fokus pada pengalaman pengguna dan kemudahan penggunaan
+
+---
+
+##  Overview
+FaithFlow bukan sekadar aplikasi, melainkan sarana pendukung perjalanan spiritual umat Muslim. Dengan memanfaatkan teknologi secara positif, FaithFlow membantu membangun kebiasaan ibadah kecil yang konsisten untuk menghasilkan perubahan besar dalam kehidupan sehari-hari.
+
+---
+
+Small habits, consistent faith.
