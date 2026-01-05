@@ -4,51 +4,35 @@
 FaithFlow adalah aplikasi Islamic habit tracker yang membantu umat Muslim membangun kebiasaan ibadah harian secara konsisten melalui fitur pencatatan, pengingat, dan checklist yang sederhana namun bermakna.
 
 ---
-## 👥 Our Team
+<h2 align="center">👥 Our Team</h2>
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Agim Ridwan">
-        <img src="https://github.com/user-attachments/assets/5e295a8e-745a-474c-b6eb-5377811f62f0" width="100px;" alt=""/>
-        <br />
-        <sub><b>Agim Ridwan</b></sub>
-      </a>
-      <br />
-      <p>1237050037</p>
-    </td>
-        <td align="center">
-      <a href="https://github.com/Agim Ridwan">
-        <img src="https://github.com/user-attachments/assets/6df42a2c-0824-4ce0-bd0c-23be9e19f5af" width="100px;" alt=""/>
-        <br />
-        <sub><b>Aryanti Nagela</b></sub>
-      </a>
-      <br />
-      <p>1237050019</p>
-    </td>
-       <td align="center">
-      <a href="https://github.com/Agim Ridwan">
-        <img src="https://github.com/user-attachments/assets/6546ecbe-c2ae-4dd7-bfd8-5bbe3ecbeb7e" width="100px;" alt=""/>
-        <br />
-        <sub><b>Breyna Putra Tarigan</b></sub>
-      </a>
-      <br />
-      <p>1237050053</p>
-    </td>
-        <td align="center">
-      <a href="https://github.com/Agim Ridwan">
-        <img src="https://github.com/user-attachments/assets/60bd06bd-740b-40c0-b510-a7a033910ebd" width="100px;" alt=""/>
-        <br />
-        <sub><b>Eka Maysa Rahmah</b></sub>
-      </a>
-      <br />
-      <p>1237050034</p>
-    </td>
-  </tr>
+<table align="center">
+<tr>
+<td align="center">
+<img src="https://github.com/user-attachments/assets/5e295a8e-745a-474c-b6eb-5377811f62f0" width="70px" style="border: 4px solid #D4AF37;"><br>
+<b>Agim Ridwan</b><br>
+1237050037
+</td>
+
+<td align="center">
+<img src="https://github.com/user-attachments/assets/6df42a2c-0824-4ce0-bd0c-23be9e19f5af" width="70px" style="border: 4px solid #D4AF37;"><br>
+<b>Aryanti Nagela</b><br>
+1237050019
+</td>
+
+<td align="center">
+<img src="https://github.com/user-attachments/assets/6546ecbe-c2ae-4dd7-bfd8-5bbe3ecbeb7e" width="70px" style="border: 4px solid #D4AF37;"><br>
+<b>Breyna Putra T</b><br>
+1237050053
+</td>
+
+<td align="center">
+<img src="https://github.com/user-attachments/assets/60bd06bd-740b-40c0-b510-a7a033910ebd" width="70px" style="border: 4px solid #D4AF37;"><br>
+<b>Eka Maysa R</b><br>
+1237050034
+</td>
+</tr>
 </table>
-
-<h3><a href="https://uinsgd.ac.id/">UIN Sunan Gunung Djati</a></h3>
-<h3><a href="http://if.uinsgd.ac.id/">Teknik Informatika</a></h3>
 
 ---
 
